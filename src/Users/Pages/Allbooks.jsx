@@ -11,7 +11,7 @@ function Allbooks() {
 
   const [token, setToken] = useState('')
 
-  const [allBooks, setAllBooks] = useState([])
+  const [allBook, setAllBook] = useState([])
 
   const [categoryArray, setCategoryArray] = useState([])
 
@@ -26,7 +26,7 @@ function Allbooks() {
   const handleFilter = (it) => {
     console.log(it)
 
-    setAllBooks(dummyBooks.filter(item => item.category == it))
+    setAllBook(dummyBooks.filter(item => item.category == it))
     console.log(dummyBooks);
 
   }
@@ -47,12 +47,12 @@ function Allbooks() {
 
       console.log(response);
 
-      setAllBooks(response.data.allBooks)
+      setAllBook(response.data.allBooks)
       setDummyBooks(response.data.allBooks)
 
 
     } catch (err) {
-      console.log("Error" + err);
+      console.log("Error" , err);
     }
   }
 
@@ -81,7 +81,7 @@ function Allbooks() {
     })
 
     setCategoryArray(unique)
-  }, [allBooks])
+  }, [allBook])
 
 
 
@@ -163,8 +163,8 @@ function Allbooks() {
               <div className="md:grid grid-cols-4 mt-5 md:mt-0">
 
                 {
-                  allBooks.length > 0 ?
-                    allBooks.map((item) => (
+                  allBook.length > 0 ?
+                    allBook.map((item) => (
                       <div className="shadow rounded p-3 ms-4 my-3">
 
                         <img width={'100%'} width={'300px'} src={item.imageUrl} alt="book" />
