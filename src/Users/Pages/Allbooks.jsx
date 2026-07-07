@@ -125,8 +125,8 @@ function Allbooks() {
 
 
               {
-                categoryArray.length > 0 ?
-                  categoryArray.map((item) => (
+                categoryArray?.length > 0 ?
+                  categoryArray?.map((item) => (
                     <div className="mt-3">
                       <input name='filter' type="radio" onClick={() => handleFilter(item)} />
                       <label for='filter' className='ms-3'>{item}</label>
