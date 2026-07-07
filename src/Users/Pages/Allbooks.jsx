@@ -163,8 +163,8 @@ function Allbooks() {
               <div className="md:grid grid-cols-4 mt-5 md:mt-0">
 
                 {
-                  allBook.length > 0 ?
-                    allBook.map((item) => (
+                  allBook?.length > 0 ?
+                    allBook?.map((item) => (
                       <div className="shadow rounded p-3 ms-4 my-3">
 
                         <img width={'100%'} width={'300px'} src={item.imageUrl} alt="book" />
